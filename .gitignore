@@ -2,5 +2,6 @@ completions/
 conf.d/
 functions/*.fish 
 fish_variables
+fish_plugins
 
 !functions/user_functions.fish
