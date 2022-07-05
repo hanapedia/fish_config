@@ -10,7 +10,8 @@ function sshhome
 end
 
 function restart --wraps=exec\ \'/opt/homebrew/bin/fish\' --description alias\ restart=exec\ \'/opt/homebrew/bin/fish\'
-  exec '/opt/homebrew/bin/fish' $argv; 
+  set -l fish_path (which fish)
+  exec $fish_path $argv; 
 end
 
 function grips --wraps='grip summery.md --export summery.html' --description 'alias grips=grip summery.md --export summery.html'
