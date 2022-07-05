@@ -7,6 +7,7 @@ if status is-interactive
 end
 
 set -gx LANG "en-US.utf-8"
+set -gx LC_ALL "en-US.utf-8"
 
 fish_add_path /opt/homebrew/bin
 fish_add_path $HOME/.cargo/bin
