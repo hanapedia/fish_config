@@ -10,9 +10,12 @@ set -gx LANG "en-US.utf-8"
 set -gx LC_ALL "en-US.utf-8"
 
 fish_add_path /opt/homebrew/bin
+
 fish_add_path $HOME/.cargo/bin
 
 pyenv init - | source
+
+set -U nvm_default_version v17.8.0
 
 function fish_user_key_bindings
   bind \cg __ghq_repository_search
