@@ -6,8 +6,8 @@ if status is-interactive
     set -g theme_display_git_default_branch yes
 end
 
-set -gx LANG "en-US.utf-8"
-set -gx LC_ALL "en-US.utf-8"
+# set -gx LANG "en-US.utf-8"
+# set -gx LC_ALL "en-US.utf-8"
 
 fish_add_path /opt/homebrew/bin
 
