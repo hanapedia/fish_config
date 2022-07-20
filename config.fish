@@ -1,3 +1,4 @@
+# Theme
 if status is-interactive
     # Commands to run in interactive sessions can go here
     # Theme
@@ -6,21 +7,26 @@ if status is-interactive
     set -g theme_display_git_default_branch yes
 end
 
-# set -gx LANG "en-US.utf-8"
-# set -gx LC_ALL "en-US.utf-8"
-
+# Path
 fish_add_path /opt/homebrew/bin
-
 fish_add_path $HOME/.cargo/bin
+source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
 
+# Language version managers
 pyenv init - | source
+set -gx nvm_default_version v17.8.0
 
-set -U nvm_default_version v17.8.0
-
+# keybindings
 function fish_user_key_bindings
   bind \cg __ghq_repository_search
 end
 
-source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
 
+# load aliases
 user_functions 
+
+# default editor
+set -gx EDITOR "nvim"
+
+# zk
+set -gx ZK_EDITOR "nvim"
