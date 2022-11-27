@@ -30,3 +30,4 @@ set -gx EDITOR "nvim"
 
 # zk
 set -gx ZK_EDITOR "nvim"
+

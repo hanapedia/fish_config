@@ -17,3 +17,25 @@ end
 function grips --wraps='grip summery.md --export summery.html' --description 'alias grips=grip summery.md --export summery.html'
   grip summery.md --export summery.html $argv; 
 end
+
+function conf
+  set -l nvim_path (which nvim)
+  switch $argv[1]
+  case n nvim
+    exec $nvim_path ~/.config/nvim
+  case f fish
+    exec $nvim_path ~/.config/fish
+  case fc fishconf
+    exec $nvim_path ~/.config/fish/config.fish
+  case '*'
+    echo Enter valid argument. n, f, or fc
+  end
+end
+
+function kc
+  kubectl $argv;
+end
+
+function nv
+  nvim $argv;
+end
