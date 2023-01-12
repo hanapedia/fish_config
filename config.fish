@@ -14,16 +14,16 @@ source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish
 
 # Language version managers
 pyenv init - | source
-set -gx nvm_default_version v17.8.0
+set -gx nvm_default_version v19.3.0
 
 # keybindings
 function fish_user_key_bindings
   bind \cg __ghq_repository_search
 end
 
-
 # load aliases
 user_functions 
+user_functions_alias
 
 # default editor
 set -gx EDITOR "nvim"
@@ -31,3 +31,6 @@ set -gx EDITOR "nvim"
 # zk
 set -gx ZK_EDITOR "nvim"
 
+## llvm
+set -gx LDFLAGS "-L/opt/homebrew/opt/llvm/lib"
+set -gx CPPFLAGS "-I/opt/homebrew/opt/llvm/include"

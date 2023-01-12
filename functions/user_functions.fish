@@ -32,10 +32,3 @@ function conf
   end
 end
 
-function kc
-  kubectl $argv;
-end
-
-function nv
-  nvim $argv;
-end
