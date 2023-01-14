@@ -1,10 +1,6 @@
 function user_functions_alias
 end
 
-function nv
-  nvim $argv;
-end
-
 function bfg
   java -jar ~/code/src/github.com/hanapedia/bfg/bfg.jar $argv;
 end

@@ -28,6 +28,16 @@ user_functions_alias
 # default editor
 set -gx EDITOR "nvim"
 
+# run neovim in ide mode
+function nvi
+  nvim $argv --cmd "lua vim.g.IDE=true";
+end
+
+# run neovim in regular mode
+function nv
+  nvim $argv;
+end
+
 # zk
 set -gx ZK_EDITOR "nvim"
 
